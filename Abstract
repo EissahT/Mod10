@@ -1,0 +1,25 @@
+abstract class Animal {
+    // Abstract method (does not have a body)
+    abstract void makeSound();
+    
+    // Regular method
+    public void eat() {
+        System.out.println("This animal eats food.");
+    }
+}
+
+class Dog extends Animal {
+    // Providing implementation for the abstract method
+    @Override
+    void makeSound() {
+        System.out.println("Woof Woof!");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.makeSound();  // Outputs: Woof Woof!
+        dog.eat();        // Outputs: This animal eats food.
+    }
+}
